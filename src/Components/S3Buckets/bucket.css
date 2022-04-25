@@ -1,0 +1,13 @@
+.bucket {
+  height: 10rem;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(92, 44, 92);
+  width: 30rem;
+}
+.link {
+  text-decoration: none;
+}

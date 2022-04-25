@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/material";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import ListObjects from "./Components/Object/ListObjects";
+import S3Buckets from "./Components/S3Buckets/S3Buckets";
+import Services from "./Components/Services/Services";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg" className="container">
+      <Routes>
+        <Route path="/" element={<Services />} />
+        <Route path="/s3" element={<S3Buckets />} />
+        <Route
+          path="/ec2"
+          element={
+            <React.Fragment>
+              <h1>
+                Work going on for EC2 service(frontend). Inconvenience is deeply
+                regretted...
+              </h1>
+            </React.Fragment>
+          }
+        />
+        <Route path="/s3/create-bucket" element={<ListObjects />} />
+        <Route path="/s3/:id" element={<ListObjects />} />
+      </Routes>
+    </Container>
   );
 }
 

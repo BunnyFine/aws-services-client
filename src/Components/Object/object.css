@@ -1,0 +1,9 @@
+.object {
+  min-height: 7rem;
+  color: aliceblue;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(92, 44, 92);
+  width: 30rem;
+}
