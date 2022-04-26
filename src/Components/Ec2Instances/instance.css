@@ -1,0 +1,9 @@
+.tablerow:hover {
+  background-color: darkgrey;
+}
+.clicked {
+  background-color: darkgray;
+}
+.notclicked {
+  background-color: white;
+}
